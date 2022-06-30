@@ -16,7 +16,7 @@ triggers {
         }
 		stage('Sonar') {
             steps {
-			withSonarQubeEnv(credentialsId: 'sonarqube') {
+			withSonarQubeEnv('sonarqube') {
             sh 'mvn sonar:sonar'
             }
                 
@@ -35,3 +35,5 @@ triggers {
         }
     }
 }
+
+
